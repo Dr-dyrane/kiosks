@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header>
       <Navbar
-        className="bg-slate-700"
+        className="bg-slate-800"
         bg=""
         variant="dark"
         expand="lg"

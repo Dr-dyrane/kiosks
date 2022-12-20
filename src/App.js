@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import Home from "./pages/Home";
+import HomePage from "./pages/Home";
 import ProductPage from "./pages/Product";
 
 import { Container } from "react-bootstrap";
@@ -15,8 +15,8 @@ export default function App() {
       <main className="py-3 min-h-[80vh]">
         <Container>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/product/:id" element={<ProductPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/product/:_id" element={<ProductPage />} />
           </Routes>
         </Container>
       </main>

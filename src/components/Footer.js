@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer class="p-3 rounded-lg shadow md:flex md:items-center md:justify-between md:p-4 bg-slate-800 inset-x-0 bottom-0">
+    <footer class="p-3 shadow md:flex md:items-center md:justify-between md:p-4 bg-slate-800 inset-x-0 bottom-0">
       <Container>
         <Row>
           <Col>
