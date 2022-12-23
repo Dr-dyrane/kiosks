@@ -13,9 +13,11 @@ export default function CartPage() {
   const location = useLocation();
   const navigate = useNavigate();
   let { _id } = useParams();
-  const qty = location.search ? parseInt(location.search.split("=")[1]) : 1;
+  const qty = location.search ? Number(location.search.split("=")[1]) : 1;
   const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state) => {
+    return state.cart;
+  });
   const { cartItems } = cart;
   useEffect(() => {
     if (_id) {
@@ -27,7 +29,8 @@ export default function CartPage() {
     <Row>
       <Col md={8}>
         <h1>Shopping Cart</h1>
-        {cartItems.length === 0 ? (
+        {_id},{qty},{dispatch.length}
+        {/*  {cartItems.length === 0 ? (
           <Message variant="info">
             Your cart is empty
             <Link to="/" className="btn border rounded btn-light my-3">
@@ -47,7 +50,7 @@ export default function CartPage() {
               </ListGroup.Item>
             ))}
           </ListGroup>
-        )}
+        )} */}
       </Col>
       <Col md={4}></Col>
     </Row>
