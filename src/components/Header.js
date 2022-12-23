@@ -16,7 +16,7 @@ export default function Header() {
             <Navbar.Brand>痛みKIOSKS</Navbar.Brand>
           </LinkContainer>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle className="rounded" aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <LinkContainer to="/cart">

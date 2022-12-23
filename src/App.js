@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 
 import HomePage from "./pages/Home";
 import ProductPage from "./pages/Product";
+import CartPage from "./pages/Cart";
 
 import { Container } from "react-bootstrap";
 
@@ -17,6 +18,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/product/:_id" element={<ProductPage />} />
+            <Route path="/cart/:_id?" element={<CartPage />} />
           </Routes>
         </Container>
       </main>
