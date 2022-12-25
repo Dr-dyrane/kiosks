@@ -112,7 +112,7 @@ export default function ProductPage() {
                 <ListGroup.Item>
                   <Button
                     onClick={addToCartHandler}
-                    className="bg-slate-800 rounded btn-block"
+                    className="bg-slate-800 rounded w-full"
                     disabled={product.countInStock === 0}
                     type="button"
                   >

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { CART_ADD_ITEM } from "../constants/cartConstants";
+import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/cartConstants";
 import { baseUrl } from "../proxy";
 
 export const addToCart = (_id, qty) => async (dispatch, getState) => {
@@ -8,7 +8,7 @@ export const addToCart = (_id, qty) => async (dispatch, getState) => {
   dispatch({
     type: CART_ADD_ITEM,
     payload: {
-      product: data._id,
+      id: data._id,
       name: data.name,
       image: data.image,
       price: data.price,
@@ -16,5 +16,13 @@ export const addToCart = (_id, qty) => async (dispatch, getState) => {
       qty,
     },
   });
-  localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems))
+  localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
+};
+
+export const removeFromCart = (id) =>  (dispatch, getState) => {
+  dispatch({
+    type: CART_REMOVE_ITEM,
+    payload : id,
+  });
+  localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
 };
